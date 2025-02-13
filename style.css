@@ -1157,3 +1157,111 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   color: deeppink;
   font-weight: 200;
 }
+
+@keyframes fadeInCurveK {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  90% {
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.overlay2 {
+	z-index: 904;
+	background-color: #333;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: fadeInCurveK 3s ease-in-out;
+}
+
+.options {
+    font-family: 'Open Sans', sans-serif;
+    z-index: 905;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20vh;
+    background-color: rgba(0, 255, 255, 0.2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInCurveK 6s ease-in-out;
+    padding-bottom: 50px;
+    margin: 0 10px 0 10px;
+}
+
+h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Memberi jarak antar tombol */
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 80px;
+}
+
+#yes {
+    background-color: #00C3FF;
+    color: white;
+}
+
+#no {
+    background-color: #00C3FF;
+    color: white;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+        #popup {
+        	font-family: 'Open Sans', sans-serif;
+        	z-index: 906;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #popup img {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* CSS untuk layar kecil (mobile) */
+        @media (max-width: 1000px) {
+            .container {
+                width: 90%;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+        }
